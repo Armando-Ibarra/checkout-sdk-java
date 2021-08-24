@@ -20,4 +20,4 @@ jobs:
           RELEASE: true
           IT_GPG_KEY: '${{ secrets.IT_GPG_KEY }}'
           IT_GPG_PASSPHRASE: '${{ secrets.IT_GPG_PASSPHRASE }}'
-        run: ./gradlew :signMavenJavaPublication
+        run: ./gradlew publishToSonatype closeAndReleaseRepository
